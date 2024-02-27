@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 exports.dbConnect = () =>{
+    console.log(process.env.DATABASE_URL,"data base connection")
     
     mongoose.connect(process.env.DATABASE_URL,{
         useNewUrlParser:true,
